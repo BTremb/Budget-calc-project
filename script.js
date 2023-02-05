@@ -5,20 +5,21 @@ btnE1.addEventListener('click', income);
 
 const btnE2 = document.querySelector('.btn');
 
-btnE1.addEventListener('click', expenses);
+btnE2.addEventListener('click', expenses);
 
 const btnE3 = document.querySelector('.btn');
 
-btnE1.addEventListener('click', calculate);
+btnE3.addEventListener('click', calculate);
 
-function income (){
+
+function income(){
     let firstnumber=document.getElementById("income").value;
     let total=parseInt(firstnumber);
     document.getElementById("totalincome").innerHTML=total;
 }
 
 
-function expenses (){
+function  expenses(){
     let firstnumber=document.getElementById("savings").value;
     let secondnumber=document.getElementById("rent").value;
     let thirdnumber=document.getElementById("light").value;
@@ -51,6 +52,8 @@ function calculate (){
     let twelthnumber=parseInt(firstnumber)+parseInt(secondnumber)+parseInt(thirdnumber)+parseInt(fourthnumber)+parseInt(fifthnumber)+parseInt(sixthnumber)+parseInt(seventhnumber)+parseInt(eightnumber)+parseInt(ninthnumber)+parseInt(tenthnumber);
     let total= parseInt(eleventhnumber)-parseInt(twelthnumber);
     document.getElementById("total").innerHTML=total;
-}
+
+} 
+
 
 
