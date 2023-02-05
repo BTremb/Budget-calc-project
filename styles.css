@@ -48,7 +48,7 @@ h1 {
     text-align: left;
     font-size: 90%;
     padding: 0.75rem;
-    box-shadow: 0.2rem 0.2rem 0.7rem #131313;
+    box-shadow: 0.2rem 0.2rem 0.7rem #000000;
     border-radius: 1rem;
     margin: auto;
     margin-bottom: 2rem;
@@ -64,6 +64,11 @@ input{
     border: none;
 }
 
+button {
+    font-size: 250%;
+    background-color: #56d62c;
+    
+}
 
 .container {
     display: flex;
@@ -106,3 +111,4 @@ input{
         flex-direction: column-reverse;
     }
 }
+
