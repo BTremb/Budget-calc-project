@@ -32,6 +32,26 @@ function expenses(){
     document.getElementById('expenses').innerHTML=total;
 }
 
+function calculation() {
+    let incomes = document.querySelectorAll('.data-inc');
+     for (let num=0; num <incomes.length; num++) {
+        if(parseInt(incomes[num].value)) {
+            total += parseInt(incomes[num].value);
+        }
+     }
+
+     let expenses = document.querySelectorAll('.data-exp');
+     for (let num = 0; num < expenses.length; num++) {
+         if(parseInt(expenses[num].value)) {
+             total += parseInt(expenses[num].value);
+         }
+     }
+
+    let total=(incomes)-(expenses);
+     document.getElementById('total').innerHTML.total;
+
+}
+
 
 
 
