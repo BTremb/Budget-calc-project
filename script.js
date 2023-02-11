@@ -17,6 +17,7 @@ function getIncome(){
         }
      }
     document.getElementById('totalincome').innerHTML=total;
+    console.log('income is', total)
 }
 
 
@@ -30,27 +31,30 @@ function expenses(){
     }
     
     document.getElementById('expenses').innerHTML=total;
+    console.log('expenses are', total)
 }
 
 function calculation() {
+    let expenses = document.querySelectorAll('.data-exp');
     let incomes = document.querySelectorAll('.data-inc');
-     for (let num=0; num <incomes.length; num++) {
+    let total = 0;
+    for (let num = 0; num <expenses.length; num++) {
+        if(parseInt(expenses[num].value)) {
+            total += parseInt(expenses[num].value);
+        } 
+    }
+        
+    for  (let num = 0; num <incomes.length; num++) {
         if(parseInt(incomes[num].value)) {
-            total += parseInt(incomes[num].value);
+            total += parseInt(expenses[num].value)
         }
-     }
+    }
+ parseInt(incomes) - parseInt(expenses);
 
-     let expenses = document.querySelectorAll('.data-exp');
-     for (let num = 0; num < expenses.length; num++) {
-         if(parseInt(expenses[num].value)) {
-             total += parseInt(expenses[num].value);
-         }
-     }
-
-    let total=(incomes)-(expenses);
-     document.getElementById('total').innerHTML.total;
-
+    document.getElementById('total').innerHTML=total;
+    console.log('calculation is', total)
 }
+
 
 
 
