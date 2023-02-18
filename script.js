@@ -1,59 +1,43 @@
 
 const btnE1 = document.getElementById('btn');
 
-btnE1.addEventListener('click', getIncome);
-
-btnE1.addEventListener('click', expenses);
-
-btnE1.addEventListener('click', calculation);
+btnE1.addEventListener('click', getSum);
 
 
-function getIncome(){
-    let incomes = document.querySelectorAll('.data-inc');
-    let total = 0
-     for (let num=0; num <incomes.length; num++) {
-        if(parseInt(incomes[num].value)) {
-            total += parseInt(incomes[num].value);
-        }
-     }
-    document.getElementById('totalincome').innerHTML=total;
-    console.log('income is', total)
-}
-
-
-function expenses(){
-    let expenses = document.querySelectorAll('.data-exp');
+function getSum(classname) {
+    let inputs = document.querySelectorAll(classname);
     let total = 0;
-    for (let num = 0; num < expenses.length; num++) {
-        if(parseInt(expenses[num].value)) {
-            total += parseInt(expenses[num].value);
+    for (let num = 0; num < inputs.length; num++) {
+        if (parseInt(inputs[num].value)) {
+            total += parseInt(inputs[num].value);
         }
     }
     
-    document.getElementById('expenses').innerHTML=total;
-    console.log('expenses are', total)
+    return total;
+
 }
 
-function calculation() {
-    let expenses = document.querySelectorAll('.data-exp');
-    let incomes = document.querySelectorAll('.data-inc');
-    let total = 0;
-    for (let num = 0; num <expenses.length; num++) {
-        if(parseInt(expenses[num].value)) {
-            total += parseInt(expenses[num].value);
-        } 
-    }
-        
-    for  (let num = 0; num <incomes.length; num++) {
-        if(parseInt(incomes[num].value)) {
-            total += parseInt(expenses[num].value)
-        }
-    }
- parseInt(incomes) - parseInt(expenses);
+const incomes = getSum('.data-inc'); 
 
-    document.getElementById('total').innerHTML=total;
-    console.log('calculation is', total)
-}
+const expenses = getSum('.data-exp');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
