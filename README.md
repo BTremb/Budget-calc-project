@@ -7,3 +7,6 @@ This was my first coding project. It is something I thought would be useful to m
 * Add your incomes
 * Add your expenses
 * Calculate them to gauge your incomes vs your expenses
+
+![](images/Budget-calc-ss1.png)
+
