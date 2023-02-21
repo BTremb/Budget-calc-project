@@ -8,5 +8,6 @@ This was my first coding project. It is something I thought would be useful to m
 * Add your expenses
 * Calculate them to gauge your incomes vs your expenses
 
-![](images/Budget-calc-ss1.png)
+You can try it out at https://btremb.github.io/Budget-calc-project2/
 
+![](images/Budget-calc-ss1.png)
